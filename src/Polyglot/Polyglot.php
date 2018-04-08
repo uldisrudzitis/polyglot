@@ -103,6 +103,16 @@ abstract class Polyglot extends Model
 		return $this->hasMany($this->getLangClass());
 	}
 
+	public function lv()
+	{
+		return $this->hasOne($this->getLangClass())->whereLang('lv');
+	}
+
+	public function ru()
+	{
+		return $this->hasOne($this->getLangClass())->whereLang('ru');
+	}
+
 	public function fr()
 	{
 		return $this->hasOne($this->getLangClass())->whereLang('fr');
